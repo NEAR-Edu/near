@@ -104,7 +104,7 @@ const App = () => {
               type="number"
               min={1}
               value={deposit}
-              onChange={({ target: { value } }) => setDeposit(value)}
+              onChange={({ target: { value } }) => setDeposit(parseInt(value))}
             />
           </label>
           <div
