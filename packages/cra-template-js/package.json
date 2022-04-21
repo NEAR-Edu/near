@@ -1,0 +1,7 @@
+{
+  "name": "@near/cra-template-js",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "node index.js"
+  }
+}
