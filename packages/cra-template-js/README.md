@@ -8,12 +8,12 @@ To get started use this template with [Create React App](https://create-react-ap
 
 ## Usage Tutorial
 
-1. create a NEAR Account
-2. create a new React app using `cra-template-near-js`
-3. create a landing page for users to sign in
-4. add a form to the landing page to wrap NEAR
-5. display the wrapped NEAR balance
-6. add an unwrap NEAR feature to the form
+1. [create a NEAR Account](#1-create-a-near-account)
+2. [create a new React app using `cra-template-near-js`](#2-create-a-react-application)
+3. [create a landing page for users to sign in](#3-create-a-landing-page)
+4. [add a form to the landing page to wrap NEAR](#4-wrap-near-on-form-submit)
+5. [display the wrapped NEAR balance](#5-view-wrapped-balance-on-mount)
+6. [add an unwrap NEAR feature to the form](#6-unwrap-near-on-form-submit)
 
 ### 1. Create a NEAR Account
 
