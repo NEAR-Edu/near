@@ -66,7 +66,7 @@ Next we'll add a form to wrap NEAR.
 
 ```jsx
 import React, { useEffect, useState } from 'react';
-import { connect, WalletConnection, utils } from 'near-api-js';
+import { connect, WalletConnection, utils, Contract } from 'near-api-js';
 import { getConfig } from './config';
 
 const {
@@ -136,7 +136,7 @@ export default function App() {
 
 ```jsx
 import React, { useEffect, useState } from 'react';
-import { connect, WalletConnection, utils } from 'near-api-js';
+import { connect, WalletConnection, utils, Contract } from 'near-api-js';
 import { getConfig } from './config';
 
 const {
@@ -218,7 +218,7 @@ export default function App() {
 
 ```jsx
 import React, { useEffect, useState } from 'react';
-import { connect, WalletConnection, utils } from 'near-api-js';
+import { connect, WalletConnection, utils, Contract } from 'near-api-js';
 import { getConfig } from './config';
 
 const {
