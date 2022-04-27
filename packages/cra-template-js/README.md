@@ -4,7 +4,11 @@ This template is used to create a NEAR front-end using [Create React App](https:
 
 ## Getting Started
 
-To get started use this template with [Create React App](https://create-react-app.dev/) `npx create-react-app --template near-js my-app`.
+To get started use this template with [Create React App](https://create-react-app.dev/)
+
+```shell
+npx create-react-app --template near-js my-app
+```
 
 ## Usage Tutorial
 
