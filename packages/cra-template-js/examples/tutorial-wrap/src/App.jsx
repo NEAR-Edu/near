@@ -23,18 +23,20 @@ export default function App() {
         new Contract(wallet.account(), 'wrap.testnet', {
           changeMethods: ['near_deposit', 'near_withdraw'],
           viewMethods: ['ft_balance_of'],
-        })
+        }),
       );
     }
   }, [wallet]);
 
+  const isSignedIn = Boolean(wallet && wallet.isSignedIn() && contract);
+
   useEffect(() => {
-    if (wallet && wallet.isSignedIn() && contract) {
+    if (isSignedIn) {
       contract
         .ft_balance_of({ account_id: wallet.getAccountId() })
         .then((balance) => setBalance(formatNearAmount(balance)));
     }
-  }, [wallet, contract]);
+  }, [wallet, contract, isSignedIn]);
 
   const handleLogin = () => {
     wallet.requestSignIn({
@@ -65,12 +67,15 @@ export default function App() {
 
   return (
     <div>
-      <button onClick={() => handleLogin()}>Login with NEAR</button>
+      {!isSignedIn && (
+        <button onClick={() => handleLogin()}>Login with NEAR</button>
+      )}
       <p>Current Wrapped Balance: {balance}</p>
       <form onSubmit={handleSubmit}>
         <select
           defaultValue={method}
           onChange={({ target: { value } }) => setMethod(value)}
+          style={{ marginRight: '1rem' }}
         >
           <option value="wrap">Wrap NEAR</option>
           <option value="unwrap">Unwrap NEAR</option>
